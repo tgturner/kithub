@@ -3,12 +3,14 @@
   <head>
     <title>KitHub</title>
     <%= csrf_meta_tags %>
+    <link href="https://cdn.quilljs.com/1.0.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.0.6/quill.js"></script>
 
     <%= stylesheet_link_tag    'application' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body <%= content_for :app %> >
     <%= yield %>
   </body>
 </html>
