@@ -46,7 +46,7 @@ class AssignmentsController < ApplicationController
     students = Course.find(course_id).students
     students.each do |student| 
       submission = Submission.create()
-      submission.raw_score = 1
+      submission.raw_score = -1
       submission.assignment = assignment
       student.submissions << submission
     end
