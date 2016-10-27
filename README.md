@@ -16,7 +16,9 @@ The gradebook displays a list of courses for the teacher. Hovering the mouse ove
 
 Clicking a summary shows the course's page. A user can click the title of the course to see graphs for data about the course. A teacher may also add students and assignments to the course. Once an assignment is added, clicking its name at the top of the column will bring up data about that assignment and allow a curve to be applied.
 
-The 'Notifications' button allows the teacher to send out emails to students who have particularly high or low average.
+The 'Notifications' button allows the teacher to send out emails to students who have a particularly high or low average.
+
+![Courses Page](screenshots/course_index.png "Courses Page")
 
 ## Syllabi
 
@@ -52,10 +54,19 @@ The syllabi feature allows users to add lesson plans to their courses. The featu
 
 ![alt text](http://i.giphy.com/rc6kqRuIUkWA.gif "Dragging and Dropping Lesson Plans")
 
+
+###Gradebook Updates
+Bringing the tradional gradebook into the 21st century, teachers can update their gradebook in nearly anytime way, which sends an AJAX request to our API, and changes are instantly reflected accordingly. Teachers may also notify students via email about individual assignments and overall score of the class, as well as whether they are failing(under 60%) or doing expetional well(over 90%). The emails are sent using Restangular post requests to Rails. Utliziing Rail's ActionMailer with the help of SendGrid delivers emails instantly.
+
+![Courses Page](screenshots/course_show.png "Courses Page")
+
+
+
 ### Data Visualizations
 The grade book data visualizations are built with angular-chart and Chart.js. The graphs are populated by pulling data using multiple custom services, allowing teachers to visualize student progress and assess overall grades throughout the course. Teachers are then able to implement curves on data visualizations to determine best scores for the class.
 
 ![alt text](http://i.giphy.com/OAispzqjGAE9i.gif “Implementing a Flat Curve“)
+
 
 ## Authors
 

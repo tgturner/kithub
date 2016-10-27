@@ -241,9 +241,8 @@ Gradebook.controller("AssignmentShowCtrl", ["$scope", "course", "assignment", "G
   }
 
   $scope.editAssignment = function(assignment) {
-    AssignmentService.editAssignment(assignment).then(function(response) {
-      CourseService.populateCourses();
-    })
+    AssignmentService.editAssignment(assignment)
+    CourseService.populateCourses();
     $rootScope.$broadcast('assignment.edit', assignment);
   }
 

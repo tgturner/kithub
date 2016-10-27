@@ -113,7 +113,7 @@ Rails.application.configure do
     # Rails also needs to know where your app is
     #   located to properly configure sending of emails
     config.action_mailer.default_url_options = {
-      :host => 'https://gentle-retreat-33093.herokuapp.com/',
+      :host => 'https://thekithub.herokuapp.com/',
     }
 
 end
