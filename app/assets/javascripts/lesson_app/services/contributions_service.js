@@ -40,8 +40,9 @@ angular.module('Lesson').factory('ContributionsService', ['$http', '$q', functio
 
 	obj.getStartingDate = function(){
 		var today = new Date();
-		var thisYear = today.getFullYear();
-		//January 1 of this year
+		var thisYear = 2016;
+		// var thisYear = today.getFullYear();
+		//1.4.17: I decided to freeze this at 2016 so that the contributions would show up. Otherwise, the graph would be blank.
 		var startDate = new Date(thisYear, 0, 1);
 		while(startDate.getDay() != 1){
 			startDate.setDate(startDate.getDate() + 1);
